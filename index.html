@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+              content="GAIA: A Comprehensive Pipeline for Enabling Aircraft Digital Twin Creation. Accepted @ ISIE 2025.">
+        <meta name="keywords" content="Aircraft Systems, Fault Classification, Generative AI, Data Augmentation, Digital Twin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GAIA: A Comprehensive Pipeline for Enabling Aircraft Digital Twin Creation</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+              rel="stylesheet">
+
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./static/images/esd.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+        <script id="MathJax-script" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: { inlineMath: [['$', '$']] }
+          });
+        </script>
+    </head>
+
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" target="_blank" href="https://capogrosso.eu">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                          More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Title, authors, institution, links. -->
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">GAIA: A Comprehensive Pipeline for Enabling Aircraft Digital Twin Creation</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.di.univr.it/?ent=persona&id=53784&lang=en">Francesco Biondani</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.capogrosso.eu">Luigi Capogrosso</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://uzairrj.github.io">Uzair Khan</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.dimi.univr.it/?ent=persona&id=23480&lang=en">Nicola Dall'Ora</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.dimi.univr.it/?ent=persona&id=22371&lang=en">Enrico Fraccaroli</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="">Domenico Fabio Migliore</a><sup>2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="">Francesco Acerra</a><sup>2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.dimi.univr.it/?ent=persona&id=218&lang=en">Marco Cristani</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.dimi.univr.it/?ent=persona&id=59&lang=en">Franco Fummi</a><sup>1</sup>
+                                </span>
+                            </div>
+
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <sup>1</sup>
+                                    Department of Engineering for Innovation Medicine, University of Verona, Italy
+                                </span>
+                                <span class="author-block">
+                                    <sup>2</sup>
+                                    Leonardo S.p.A., Turin, Italy
+                                </span>
+                            </div>
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- Proceedings link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
+                                    <!-- UniVR open access link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>UniVR Open Access</span>
+                                        </a>
+                                    </span>
+                                    <!-- Code link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="https://github.com/esd-univr/GAIA" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                        <span>Code</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="columns is-centered">
+                                <div class="column has-text-centered">
+                                    <span class="tag is-success is-primary is-large">🎉 Accepted @ ISIE 2025 🎉</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaser. -->
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body has-text-centered">
+                    <img src="./static/images/teaser.png" alt="Teaser" type="image/png" style="width: 65%; height: 65%;">
+                    <h6 class="subtitle is-6 has-text-centered">
+                        The four-stage GAIA pipeline for enabling the creation of aircraft digital twin.
+                        Specifically, GAIA integrates physics-driven simulations with GenAI-augmented data to improve model robustness and accuracy.
+                        Furthermore, we build DSLG D/R, a novel and accurate physics-driven dataset specifically designed for LGS fault classification in collaboration with Leonardo S.p.A.
+                    </h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abstract. -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                The integrity and reliability of Landing Gear Systems (LGSs) are crucial for aircraft safety.
+                                However, the scarcity of real-world fault data hinders the creation of effective Predictive Maintenance (PdM) strategies, especially those that rely on modern Machine Learning (ML) techniques.
+                                As a result, this article presents GAIA: the first comprehensive pipeline that enables the creation of digital twins to support PdM in the aviation domain.
+                                Specifically, combining multi-physics modeling and data-driven techniques, GAIA allows learning models to achieve superior performance in fault detection and diagnosis tasks.
+                                As a use case, we consider a LGS system, and introduce DSLG D/R, a novel dataset specifically designed for LGS fault classification, created in collaboration with Leonardo S.p.A.
+                                Our results demonstrate a significant 10.56% improvement in fault classification accuracy compared to other data augmentation methods.
+                                To further demonstrate the applicability of our method, we also evaluated it on the Electrical Fault dataset, a well-established benchmark for the diagnosis of power system faults, highlighting the GAIA versatility across different critical safety domains.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation. -->
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+<pre><code>TBA.
+</code></pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" target="_blank" href="https://github.com/luigicapogrosso" class="external-link" disabled>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license" target="_blank"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                                The source code is based on <a target="_blank" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
